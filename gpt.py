@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 
 def chatGPT(prompt):
 
