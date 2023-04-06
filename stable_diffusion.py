@@ -2,7 +2,7 @@ import requests
 import json
 import base64
 
-gradio_url = "https://f8d894e0fe78c70fe6.gradio.live/"
+gradio_url = ""
 txt2img_url = f'{gradio_url}sdapi/v1/txt2img'
 
 
