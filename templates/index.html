@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Make Photo</title>
+</head>
+<body>
+    <h1>輸入生成故事風格</h1>
+    <form method="POST">
+        <input type="text" name="text">
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        {% if text_data %}
+            <p>{{ text_data }}</p>
+        {% endif %}
+    </div>
+    <div style="width: 512px; height: 512px; border: 1px solid black;">
+        {% if image_data %}
+            <img src="data:image/png;base64,{{ image_data }}" width="512" height="512">
+        {% endif %}
+    </div>
+</body>
+</html>
+
