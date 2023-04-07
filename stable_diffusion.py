@@ -2,8 +2,11 @@ import requests
 import json
 import base64
 
-gradio_url = ""
-txt2img_url = f'{gradio_url}sdapi/v1/txt2img'
+with open('setting.json', 'r', encoding="utf-8") as f:
+  jdata = json.load(f)
+
+stable_diffuison_url = jdata['stable_diffusion_ip']
+txt2img_url = f'{stable_diffuison_url}sdapi/v1/txt2img'
 
 
 def submit_post(url: str, data: dict):
@@ -16,7 +19,9 @@ def save_encoded_image(b64_image: str, output_path: str):
 
 
 def make_photo(prompt):
-    data = {'prompt': prompt, 'steps': 25}
+    positive_prompt = jdata["positive_prompt"]
+    negative_prompt = jdata["negative_prompt"]
+    data = {'prompt': f"{positive_prompt},{prompt}", 'steps': 20, 'width': 512, 'height': 512, "sampler_index": "DDIM", "negative_prompt": negative_prompt}
     response = submit_post(txt2img_url, data)
     output_name = "pic.png"
     save_encoded_image(response.json()['images'][0], output_name)

@@ -1,0 +1,7 @@
+{
+  "openai_key" : "",
+  "google_key" : "",
+  "stable_diffusion_ip" : "",
+  "positive_prompt": "(best quality ,masterpiece:1.2), highres, illustration, an extremely delicate and beautiful, extremely detailed ,CG ,unity ,8k wallpaper, Amazing, finely detail, masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper",
+  "negative_prompt": "(worst quality:1.4), (low quality:1.4), (normal quality:1.4), lowers, monochrome, grayscales, skin spots, acnes, skin blemishes, age spot, 6 more fingers on one hand, deformity, bad legs, error legs, bad feet, malformed limbs, extra limbs, ugly, poorly drawn hands, poorly drawn feet, poorly drawn face, text, mutilated, extra fingers, mutated hands, mutation, bad anatomy, cloned face, disfigured, fused fingers"
+}

@@ -1,9 +1,13 @@
 import requests
+import json
+
+with open('setting.json', 'r', encoding="utf-8") as f:
+  jdata = json.load(f)
 
 def chinese_to_english(chinese_text):
     url = 'https://translation.googleapis.com/language/translate/v2'
     params = {
-        'key': '',
+        'key': jdata['google_key'],
         'source': 'zh-TW',
         'target': 'en',
         'q': chinese_text
